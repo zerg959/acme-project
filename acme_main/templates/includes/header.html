@@ -10,14 +10,14 @@
           {% with request.resolver_match.view_name as view_name %}
           <li class="nav-item">
             <a class="nav-link {% if view_name == 'homepage:index' %}active{% endif %}" 
-            href="{% url 'homepage:index' %}">Главная</a>  
+            href="{% url 'homepage:index' %}">Main</a>  
           </li>
           <li>
             <a class="nav-link {% if view_name == 'catalog:product_list' %}active{% endif %}"
-            href="{% url 'catalog:product_list' %}">Каталог</a>       
+            href="{% url 'catalog:product_list' %}">Catalog</a>       
           </li>
           <li>
-            <a class="nav-link {% if view_name == 'about:description' %}active{% endif %}" href="{% url 'about:description' %}">О проекте</a>
+            <a class="nav-link {% if view_name == 'about:description' %}active{% endif %}" href="{% url 'about:description' %}">About</a>
           </li>
           {% endwith %}
         </ul>
