@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {% block title %}
-  ACME SHOP: product list
+  ACME STORE: product list
 {% endblock %}
 {% block content %}
   <h1>All our assortment</h1>
-  <!-- <ul>
-    {% for product in product_list %}
+  <ul>
+    {% for product in products %}
+    <article>
       <li>
         <h3>{{ product.title }}</h3>
-        <p>{{ product.description|truncatewords:10 }}</p>
+        <p>{{ product.description }}</p>
         <a href="{% url 'catalog:product_detail' product.id %}">подробнее</a>
       </li>
+    </article>
       {% if not forloop.last %}
         <hr>
       {% endif %}
     {% endfor %}
-  </ul> -->
+  </ul>
 {% endblock %}
+

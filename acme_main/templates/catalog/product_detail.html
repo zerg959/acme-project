@@ -1,8 +1,26 @@
 {% extends "base.html" %}
 {% block title %}
-  ACME SHOP: product {{ pk }}
+  ACME SHOP: product {{ product.title }}
 {% endblock %}
 {% block content %}
-  <h1>Info about product {{ pk }}</h1>
+  <h1>Info about product {{ product.title }}</h1>
+  <div class="container py-5">
+    <article>
+      <ul>
+        <li>
+          Title: {{ product.title }}              
+        </li>
+        <li>
+          Category: <a href="">{{ product.category }}</a>
+        </li>
+        <li>
+          Price: ${{ product.price }}              
+        </li>
+      </ul>         
+      <p>
+        {{product.description}}
+      </p>          
+    </article>                
+  </div>
 {% endblock %}
 <!-- <a href={"% url 'ice_cream:ice_cream_detail' ice_cream.id %"}>Подробнее</a>
